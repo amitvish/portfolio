@@ -408,6 +408,11 @@ img {
   cursor: pointer;
   margin: auto;
 }
+
+.contact__button:active{
+  transform: scale(0.92);
+}
+
 #msg{
   color: #61b752;
   margin-top: 10px;
