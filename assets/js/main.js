@@ -41,6 +41,14 @@ function scrollActive(){
 }
 window.addEventListener('scroll', scrollActive)
 
+/*==================== SIDE SCROLL WORK IMAGES =============*/
+let scrollContainer = document.querySelector(".work__container");
+
+scrollContainer.addEventListener("wheel", (evt) => {
+    evt.preventDefault();
+    scrollContainer.scrollLeft += evt.deltaY;
+})
+
 /*===== SCROLL REVEAL ANIMATION =====*/
 const sr = ScrollReveal({
     origin: 'top',
@@ -55,7 +63,7 @@ sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400
 sr.reveal('.home__social-icon',{ interval: 200}); 
 sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
 
-// =========== CONTACT-FORM =======
+/*=========== CONTACT-FORM =======*/
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycbyB-1is_vCJLzIjKYnRGN1Wh8AkZS6eX4va1ulM4CLe7CPcTkFCPufrv97EhLJBkk9-xw/exec'
             const form = document.forms['submit-to-google-sheet']

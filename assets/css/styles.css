@@ -342,7 +342,19 @@ img {
 
 /* ===== WORK =====*/
 .work__container {
-  row-gap: 2rem;
+  display: flex;
+  overflow-x: scroll;
+}
+
+.work__container div{
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  flex: none;
+}
+
+.work__container::-webkit-scrollbar{
+  display: none;
 }
 
 .work__img {
@@ -353,11 +365,11 @@ img {
 }
 
 .work__img img {
-  transition: 2s;
+  transition: 1s;
 }
 
 .work__img:hover img{
-  transform: scale(1.5);
+  transform: scale(1.1);
 }
 
 .layer{
