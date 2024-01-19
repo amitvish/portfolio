@@ -320,7 +320,7 @@ img {
 }
 
 .skills__html {
-  width: 95%;
+  width: 85%;
 }
 
 .skills__css {
@@ -331,8 +331,12 @@ img {
   width: 65%;
 }
 
-.skills__ux {
-  width: 85%;
+.skills__java {
+  width: 65%;
+}
+
+.skills__sprinboot{
+  width: 45%;
 }
 
 .skills__img {
