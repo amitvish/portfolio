@@ -481,6 +481,10 @@ img {
   font-size: var(--smaller-font-size);
 }
 
+.heart {
+  color: red;
+}
+
 /* ===== MEDIA QUERIES=====*/
 @media screen and (max-width: 320px) {
   .home {
