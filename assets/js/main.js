@@ -81,3 +81,25 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbyB-1is_vCJLzIjKYnRGN
                 })
                 .catch(error => console.error('Error!', error.message))
             })
+
+/*=========== DARK-MODE =======*/
+var icon = document.getElementById("icon")
+
+icon.onclick = function(){
+    console.log('Icon clicked'); // Check if this logs when you click
+    document.body.classList.toggle("dark-theme");
+    console.log(document.body.classList.contains("dark-theme")); // Should log true when dark mode is active
+    if(document.body.classList.contains("dark-theme")){
+        icon.src = "assets/img/sun.png"
+        document.body.style.backgroundColor = "#333333"; 
+        // document.body.style.Color = "#F0F0F0"; 
+
+
+    }else{
+        icon.src = "assets/img/moon.png"
+        document.body.style.backgroundColor = "#F0F0F0"; 
+        // document.body.style.Color = "#333333"; 
+
+
+    }
+}

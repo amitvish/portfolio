@@ -49,6 +49,7 @@ body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   color: var(--second-color);
+  background-color: #f0f0f0; /* Light mode background color */
 }
 
 h1, h2, p {
@@ -113,7 +114,7 @@ img {
   left: 0;
   z-index: var(--z-fixed);
   background-color: #fff;
-  box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
+  box-shadow: 0 1px 4px rgba(0, 11, 21, 0.15); /* Light mode shadow */
 }
 
 /*===== NAV =====*/
@@ -169,6 +170,17 @@ img {
   color: var(--second-color);
   font-size: 1.5rem;
   cursor: pointer;
+}
+
+/*===== DARK MODE =====*/
+
+#icon {
+  width: 30px;
+  cursor: pointer;
+  position: absolute; /* Position the icon absolutely */
+  right: 0; /* Align to the right */
+  margin-right: 8rem; /* Add some space from the right edge */
+  top: 27%;
 }
 
 /*Active menu*/
@@ -234,7 +246,7 @@ img {
 }
 
 .home__blob-img {
-  width: 360px;
+  width: 365px;
 }
 
 /*BUTTONS*/
@@ -568,6 +580,7 @@ img {
   .nav__list {
     display: flex;
     padding-top: 0;
+    text-align: right;
   }
   .nav__item {
     margin-left: var(--mb-6);
@@ -615,4 +628,70 @@ img {
   .home__img {
     width: 450px;
   }
+}
+
+/* Dark Mode Styles */
+/* Dark Mode Colors */
+.dark-theme {
+  --hue-color: 224; /* Keep the same hue for consistency */
+  /* --first-color: hsl(var(--hue-color), 89%, 80%); Lighter shade */
+  --first-color: hsl(var(--hue-color), 89%, 40%); /* Brighter but darker blue */
+  --second-color: hsl(0, 0%, 100%); /* White */
+}
+
+/* Apply dark mode styles */
+.dark-theme body {
+  background-color: var(--second-color) !important; /* Darker background for dark mode */
+  color: #FFFFFF !important; /* White text color for contrast */
+}
+
+/* Ensure elements are styled in dark mode */
+.dark-theme .nav__link {
+  color: #e0e0e0; /* Light gray for links in dark mode */
+}
+
+.dark-theme .section-title::after {
+  background-color: var(--first-color); /* Use the lighter shade */
+}
+
+.dark-theme .l-header,
+.dark-theme .nav__menu,
+.dark-theme .nav__link:hover::after,
+.dark-theme .active::after,
+.dark-theme .button,
+.dark-theme .skills__bar,
+.dark-theme .layer {
+  background-color: var(--first-color); /* Use the lighter shade */
+}
+
+/* Dark Mode Footer Styling */
+.dark-theme footer {
+  /* color: #000000; Black text color for the footer in dark mode */
+  background-color: darkblue; /* Ensure the footer background color remains unchanged */
+}
+
+.dark-theme .skills__data {
+  box-shadow: 0px 4px 25px rgba(255, 255, 255, 0.3); /* White shadow for dark mode */
+
+}
+
+.dark-theme .work__img {
+  box-shadow: 0px 4px 25px rgba(255, 255, 255, 0.3); /* White shadow for dark mode */
+}
+
+.dark-theme .button:hover {
+  box-shadow: 0px 4px 25px rgba(255, 255, 255, 0.3); /* White shadow for dark mode */
+}
+
+.dark-theme .l-header {
+  box-shadow: 0px 4px 25px rgba(255, 255, 255, 0.3); /* White shadow for dark mode */
+}
+
+/* Dark Mode Styling */
+.dark-theme .nav__link::after {
+  background-color: #FFFFFF; /* White underline in dark mode */
+}
+
+.dark-theme .nav__link:hover::after {
+  background-color: #FFFFFF; /* White underline on hover in dark mode */
 }
